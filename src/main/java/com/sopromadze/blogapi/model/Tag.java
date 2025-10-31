@@ -26,7 +26,6 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @Table(name = "tags")
-//@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 public class Tag extends UserDateAudit {
 
 	private static final long serialVersionUID = -5298707266367331514L;

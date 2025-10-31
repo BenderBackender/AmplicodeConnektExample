@@ -1,5 +1,6 @@
 package com.sopromadze.blogapi.repository;
 
+import com.sopromadze.blogapi.model.Category;
 import com.sopromadze.blogapi.model.Post;
 import com.sopromadze.blogapi.model.Tag;
 import org.springframework.data.domain.Page;
@@ -13,7 +14,7 @@ import java.util.List;
 public interface PostRepository extends JpaRepository<Post, Long> {
 	Page<Post> findByCreatedBy(Long userId, Pageable pageable);
 
-	Page<Post> findByCategory(Long categoryId, Pageable pageable);
+	Page<Post> findByCategory(Category categoryId, Pageable pageable);
 
 	Page<Post> findByTags(List<Tag> tags, Pageable pageable);
 
